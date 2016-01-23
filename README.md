@@ -1,9 +1,9 @@
-# Android NDK - Docker Image
+# Android Cordova - Docker Image
 
-Android with pre-installed NDK docker image.
+Android with pre-installed Cordova docker image.
 
-Based on the base Android docker image ( https://github.com/bitrise-docker/android / `bitriseio/docker-android` ),
-and extends it with pre-installed Android NDK.
+Based on the base Android docker image (https://github.com/bitrise-docker/android/bitriseio/docker-android),
+and extends it with pre-installed Cordova CLI.
 
 This docker image is pre-cached on the related [bitrise.io](https://www.bitrise.io)
 Virtual Machines.
