@@ -24,6 +24,12 @@ RUN npm install -g cordova
 RUN cordova -v
 
 # ------------------------------------------------------
+# --- Install Ant
+
+RUN apt-get install -y ant
+RUN ant -version
+
+# ------------------------------------------------------
 # --- Set missing environment variables
 
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/
