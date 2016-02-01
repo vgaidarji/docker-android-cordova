@@ -5,7 +5,6 @@ FROM bitriseio/docker-android:latest
 
 RUN apt-get update -qq
 
-
 # ------------------------------------------------------
 # --- Node JS
 
@@ -21,20 +20,14 @@ RUN npm -v
 # ------------------------------------------------------
 # --- Cordova CLI
 
-#RUN npm install -g cordova
-#RUN cordova -v
+RUN npm install -g cordova
+RUN cordova -v
 
-# Cordova CLI (alternative installation)
-RUN apt-add-repository ppa:cordova-ubuntu/ppa
-RUN apt-get update
-RUN apt-get -y install cordova-cli
-# To build an application for the Ubuntu platform, the following extra packages are required
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y cmake debhelper libx11-dev libicu-dev
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y pkg-config qtbase5-dev
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y qtchooser qtdeclarative5-dev qtfeedback5-dev
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y qtlocation5-dev qtmultimedia5-dev qtpim5-dev qtsensors5-dev qtsystems5-dev
+# ------------------------------------------------------
+# --- Set missing environment variables
 
-
+ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/
+ENV PATH ${PATH}:${JAVA_HOME}
 
 # ------------------------------------------------------
 # --- Cleanup and rev num
