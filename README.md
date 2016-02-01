@@ -2,7 +2,7 @@
 
 Android with pre-installed Cordova docker image.
 
-Based on the base Android docker image (https://github.com/bitrise-docker/android/bitriseio/docker-android),
+Based on the base Android docker image (https://github.com/bitrise-docker/android/),
 and extends it with pre-installed Cordova CLI.
 
 This docker image is pre-cached on the related [bitrise.io](https://www.bitrise.io)
