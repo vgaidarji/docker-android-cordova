@@ -30,12 +30,6 @@ RUN apt-get install -y ant
 RUN ant -version
 
 # ------------------------------------------------------
-# --- Set missing environment variables
-
-ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/
-ENV PATH ${PATH}:${JAVA_HOME}
-
-# ------------------------------------------------------
 # --- Cleanup and rev num
 
 # Cleaning
